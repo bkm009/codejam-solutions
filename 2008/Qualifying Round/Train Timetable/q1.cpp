@@ -59,31 +59,31 @@ int main(){
                 break;
 
             if(AD[j] < D[k]){
-                cout<<AD[j++]<<" OUT"<<endl;
-               //AD[j++];
+               // cout<<AD[j++]<<" OUT"<<endl;
+               AD[j++];
                 if(isIn == 0)
                     isOut += 1;
                 if(isIn != 0)
                     isIn -= 1;
             }
             else{
-                cout<<D[k++]<<" IN"<<endl;
-            //    D[k++];
+                //cout<<D[k++]<<" IN"<<endl;
+                D[k++];
                 isIn += 1;
             }
         }
         while(j < NA){
-            cout<<AD[j++]<<" OUT"<<endl;
-          // AD[j++];
+            //cout<<AD[j++]<<" OUT"<<endl;
+           AD[j++];
             if(isIn == 0)
                     isOut += 1;
             if(isIn != 0)
                     isIn -= 1;
         }
-        while(k < NB)
-            cout<<D[k++]<<" IN"<<endl;
+      //  while(k < NB)
+        //    cout<<D[k++]<<" IN"<<endl;
 
-       cout<<endl<<endl;
+      // cout<<endl<<endl;
         ansA = max(isOut, ansA);
         isOut = 0;
         isIn = 0;
@@ -93,29 +93,29 @@ int main(){
                 break;
 
             if(BD[j] < C[k]){
-                cout<<BD[j++]<<" OUT"<<endl;
-              // BD[j++];
+              //  cout<<BD[j++]<<" OUT"<<endl;
+               BD[j++];
                 if(isIn == 0)
                     isOut += 1;
                 if(isIn != 0)
                     isIn -= 1;
             }
             else{
-                cout<<C[k++]<<" IN"<<endl;
-             //   C[k++];
+              //  cout<<C[k++]<<" IN"<<endl;
+                C[k++];
                 isIn += 1;
             }
         }
         while(j < NB){
-            cout<<BD[j++]<<" OUT"<<endl;
-          //  BD[j++];
+           // cout<<BD[j++]<<" OUT"<<endl;
+            BD[j++];
             if(isIn == 0)
                 isOut += 1;
             if(isIn != 0)
                 isIn -= 1;
         }
-        while(k < NA)
-            cout<<C[k++]<<" IN"<<endl;
+      //  while(k < NA)
+        //    cout<<C[k++]<<" IN"<<endl;
 
         ansB = max(isOut, ansB);
 
